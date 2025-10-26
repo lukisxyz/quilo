@@ -1,3 +1,3 @@
-# Quilo | Empowering Writers, Poets, and Storytellers
+# Plumeo | Empowering Writers, Poets, and Storytellers
 
 (coming soon)
