@@ -10,6 +10,9 @@ import {
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import { Toaster } from "~/components/ui/sonner";
+import "@fontsource-variable/nunito-sans";
+import "@solana/wallet-adapter-react-ui/styles.css";
+import { SolanaWalletProvider } from "~/providers/solana.provider";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -27,20 +30,22 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        {children}
-        <Toaster />
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
+    <SolanaWalletProvider>
+      <html lang="en">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <Meta />
+          <Links />
+        </head>
+        <body style={{ fontSize: 15 }}>
+          {children}
+          <Toaster position="bottom-left" />
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </html>
+    </SolanaWalletProvider>
   );
 }
 

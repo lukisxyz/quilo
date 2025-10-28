@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
-}
-
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -76,6 +65,7 @@ body {
     @apply border-border;
   }
   body {
+    font-family: 'Nunito Sans Variable', sans-serif;
     @apply bg-background text-foreground;
   }
 }
