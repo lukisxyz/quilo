@@ -1,39 +1,49 @@
 {
-  "name": "quilo",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "npm run dev",
-    "typecheck": "react-router typegen && tsc"
-  },
-  "dependencies": {
-    "@heroui/react": "^2.8.5",
-    "@libsql/client": "^0.15.15",
-    "@react-router/node": "^7.9.4",
-    "better-auth": "^1.3.32",
-    "dotenv": "^17.2.3",
-    "drizzle-orm": "^0.44.7",
-    "framer-motion": "^12.23.24",
-    "isbot": "^5.1.27",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router": "^7.9.4"
-  },
-  "devDependencies": {
-    "@netlify/vite-plugin": "^2.7.4",
-    "@netlify/vite-plugin-react-router": "^2.0.1",
-    "@react-router/dev": "^7.9.4",
-    "@types/node": "^20.17.32",
-    "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.6",
-    "autoprefixer": "^10.4.21",
-    "drizzle-kit": "^0.31.5",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.3",
-    "vite-tsconfig-paths": "^5.1.4"
-  }
+	"name": "quilo",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "react-router build",
+		"dev": "react-router dev",
+		"start": "npm run dev",
+		"typecheck": "react-router typegen && tsc",
+		"lint": "pnpm exec biome check --write ./app/**/*"
+	},
+	"dependencies": {
+		"@libsql/client": "^0.15.15",
+		"@radix-ui/react-checkbox": "^1.3.3",
+		"@radix-ui/react-label": "^2.1.7",
+		"@radix-ui/react-slot": "^1.2.3",
+		"@react-router/node": "^7.9.4",
+		"better-auth": "^1.3.32",
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"dotenv": "^17.2.3",
+		"drizzle-orm": "^0.44.7",
+		"isbot": "^5.1.27",
+		"lucide-react": "^0.548.0",
+		"next-themes": "^0.4.6",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-router": "^7.9.4",
+		"sonner": "^2.0.7",
+		"tailwind-merge": "^3.3.1",
+		"tailwindcss-animate": "^1.0.7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.1",
+		"@netlify/vite-plugin": "^2.7.4",
+		"@netlify/vite-plugin-react-router": "^2.0.1",
+		"@react-router/dev": "^7.9.4",
+		"@types/node": "^20.17.32",
+		"@types/react": "^18.3.20",
+		"@types/react-dom": "^18.3.6",
+		"autoprefixer": "^10.4.21",
+		"drizzle-kit": "^0.31.5",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^3.4.17",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.3",
+		"vite-tsconfig-paths": "^5.1.4"
+	}
 }
